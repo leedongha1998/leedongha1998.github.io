@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background: black;
+  /*스크롤효과*/
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.sec {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*스크롤 내려도 이미지 고정 효과*/
+  scroll-snap-align: center;
+}
+
+h3 {
+  color: white;
+  font-size: 10vw;
+  text-align: center;
+}
+
+.sec:nth-child(1) {
+  background: url("./img/introduce1.jpg_large");
+  background-size: cover;
+  background-attachment: fixed; /*배경고정*/
+  background-position: center;
+}
+.sec:nth-child(2) {
+  background: url("./img/path1.avif");
+  background-size: cover;
+  background-attachment: fixed; /*배경고정*/
+  background-position: center;
+}
+.sec:nth-child(3) {
+  background: url("./img/path2.avif");
+  background-size: cover;
+  background-attachment: fixed; /*배경고정*/
+  background-position: center;
+}
+
+.sec:nth-child(4) {
+  background: url("./img/path3.avif");
+  background-size: cover;
+  background-attachment: fixed; /*배경고정*/
+  background-position: center;
+}
+
+.sec:nth-child(5) {
+  background: url("./img/path4.avif");
+  background-size: cover;
+  background-attachment: fixed; /*배경고정*/
+  background-position: center;
+}
+
+.sec:nth-child(6) {
+  background: url("./img/path5.avif");
+  background-size: cover;
+  background-attachment: fixed; /*배경고정*/
+  background-position: center;
+}
+
+.sec:nth-child(7) {
+  background: url("./img/path6.avif");
+  background-size: cover;
+  background-attachment: fixed; /*배경고정*/
+  background-position: center;
+}
+
+.sec:nth-child(8) {
+  background: url("./img/night.jpg.crdownload");
+  background-size: cover;
+  background-attachment: fixed; /*배경고정*/
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+.sec:nth-child(9) {
+  background: url("../sample/image/city1.PNG");
+  background-size: cover;
+  background-attachment: fixed; /*배경고정*/
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.content h2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.content h2 span {
+  position: sticky;
+  top: 100px;
+  line-height: 100vh;
+  height: 100vh;
+  color: #fff;
+  font-size: 14vw;
+  margin-top: calc(100vh * var(--i));
+}
+a {
+  color: white;
+  text-decoration: none;
+}

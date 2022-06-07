@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip</title>
+    <link rel="stylesheet" href="trip.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="trip.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <i class="fa-brands fa-accusoft"></i>
+      </div>
+      <ul class="navbar__menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="usertable.html">findMember</a></li>
+        <li><a href="signup.html">signUp</a></li>
+      </ul>
+      <ul class="navbar__links">
+        <a href="#" class="navbar__toggleBtn">
+          <i class="fa-solid fa-align-justify"></i>
+        </a>
+      </ul>
+    </nav>
+    <!-- 인풋창칸 -->
+
+    <h1>Trip</h1>
+    <div id="backgroundImage">
+      <img src="../homepage/img/sea.jpg" alt="" />
+      <div id="findTrip">
+        <form action="#">
+          <input
+            type="text"
+            name="to"
+            placeholder="어디로 떠나시나요"
+            id="totrip"
+          />
+          <div id="tripDate">
+            <input type="date" name="startTrip" id="startTrip" />
+            <input type="date" name="endTrip" id="endTrip" />
+          </div>
+          <button type="button">검색하기</button>
+        </form>
+      </div>
+    </div>
+
+    <h2>추천 여행지</h2>
+
+    <div id="slideShow">
+      <ul class="slides">
+        <li class="slidelist">
+          <img src="../homepage/img/seoul.jpg" alt="" />서울
+        </li>
+        <li class="slidelist">
+          <img src="../homepage/img/china.jpg" alt="" />중국
+        </li>
+        <li class="slidelist">
+          <img src="../homepage/img/japan.jpg" alt="" />일본
+        </li>
+        <li class="slidelist">
+          <img src="../homepage/img/usa.jpg" alt="" />미국
+        </li>
+        <li class="slidelist">
+          <img src="../homepage/img/philiphin.jpg" alt="" />필리핀
+        </li>
+        <li class="slidelist">
+          <img src="../homepage/img/betnam.jpg" alt="" />베트남
+        </li>
+        <li class="slidelist">
+          <img src="../homepage/img/italia.jpg" alt="" />이탈리아
+        </li>
+        <li class="slidelist">
+          <img src="../homepage/img/prance.jpg" alt="" />프랑스
+        </li>
+        <li class="slidelist">
+          <img src="../homepage/img/uk.png" alt="" />영국
+        </li>
+      </ul>
+      <p class="controller">
+        <span class="prev">&lang;</span>
+        <span class="next">&rang;</span>
+      </p>
+    </div>
+
+    <br />
+    <h2>국내 숙소 예약</h2>
+
+    <ul id="resList">
+      <li>
+        <div class="selectspot">
+          <span>서울</span>
+        </div>
+      </li>
+      <li>
+        <div class="selectspot">
+          <span>강릉</span>
+        </div>
+      </li>
+      <li>
+        <div class="selectspot">
+          <span>가평</span>
+        </div>
+      </li>
+      <li>
+        <div class="selectspot">
+          <span>부산</span>
+        </div>
+      </li>
+      <li>
+        <div class="selectspot">
+          <span>제주</span>
+        </div>
+      </li>
+    </ul>
+
+    <div id="reservation">
+      <div class="hotel">
+        <img src="./img/hotel1.jpg" alt="" />
+        <div>
+          <span>저기호텔</span>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li><i class="fa-solid fa-star-half"></i></li>
+          </ul>
+        </div>
+        <div><span>56,000won</span></div>
+      </div>
+      <div class="hotel">
+        <img src="./img/hotel2.jpg" alt="" />
+        <div>
+          <span>어디호텔</span>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-star-half"></i>
+            </li>
+          </ul>
+        </div>
+        <div><span>45,000won</span></div>
+      </div>
+      <div class="hotel">
+        <img src="./img/hotel3.jpg" alt="" />
+        <div>
+          <span>여기호텔</span>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i>
+            </li>
+          </ul>
+        </div>
+        <div><span>50,000won</span></div>
+      </div>
+    </div>
+
+    <script>
+      const slides = document.querySelector(".slides"); //전체 슬라이드 컨테이너
+      const slideImg = document.querySelectorAll(".slides li"); //모든 슬라이드들
+      let currentIdx = 0; //현재 슬라이드 index
+      const slideCount = slideImg.length; // 슬라이드 개수
+      const prev = document.querySelector(".prev");
+      const next = document.querySelector(".next");
+      const slideWidth = 300; //한개의 슬라이드 넓이
+      const slideMargin = 100; //슬라이드간의 margin 값
+
+      //전체 슬라이드 컨테이너 넓이 설정
+      slides.style.width = (slideWidth + slideMargin) * slideCount + "px";
+
+      function moveSlide(num) {
+        slides.style.left = -num * 400 + "px";
+        currentIdx = num;
+      }
+
+      prev.addEventListener("click", function () {
+        /*첫 번째 슬라이드로 표시 됐을때는
+        이전 버튼 눌러도 아무런 반응 없게 하기 위해
+        currentIdx !==0일때만 moveSlide 함수 불러옴 */
+
+        if (currentIdx !== 0) moveSlide(currentIdx - 1);
+      });
+
+      next.addEventListener("click", function () {
+        // 마지막 슬라이드일 때 반응 없애기
+        if (currentIdx !== slideCount - 1) {
+          moveSlide(currentIdx + 1);
+        }
+      });
+    </script>
+  </body>
+</html>

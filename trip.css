@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  height: 2000px;
+}
+
+/* 인풋창칸 */
+#backgroundImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#backgroundImage img {
+  width: 100%;
+  height: 400px;
+  z-index: 0;
+}
+h1 {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  color: white;
+}
+#findTrip {
+  border: 1px solid black 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 200px;
+  background-color: #f8f7f9;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px lightgray;
+  z-index: 1;
+  position: relative;
+  bottom: 100px;
+}
+#findTrip input {
+  margin: 40px 0 0 0;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-style: none;
+  text-align: center;
+}
+#totrip {
+  width: 400px;
+}
+#tripDate input {
+  width: 196px;
+  margin: 10px 0;
+}
+button {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  top: 15px;
+  left: 105px;
+  border-radius: 15px;
+  border-style: none;
+  color: white;
+  background-color: #679ef8;
+}
+button:hover {
+  background-color: #87b3fb;
+}
+
+/* 슬라이드 시작 */
+.slides img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+.slides img:hover {
+  transform: scale(1.2);
+}
+.slidelist {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#slideShow {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.slides {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2500px;
+  transition: left 0.5s ease-out;
+}
+.slides li:first-child {
+  margin-left: 100px;
+}
+
+.slides li:not(:last-child) {
+  float: left;
+  margin-right: 100px;
+}
+
+.slides li {
+  float: left;
+}
+
+.controller span {
+  position: absolute;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px 20px;
+  top: 50%;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.prev {
+  left: 100px;
+}
+.prev:hover {
+  transform: translateX(-10px);
+}
+.next {
+  right: 100px;
+}
+.next:hover {
+  transform: translateX(10px);
+}
+h2 {
+  text-align: center;
+}
+/* 슬라이드 끝 */
+
+/* 숙소 예약 블럭 */
+#resList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+#resList li,
+.hotel li {
+  list-style-type: none;
+}
+.selectspot {
+  margin: 0 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+}
+.selectspot:hover {
+  font-weight: bold;
+}
+
+#reservation {
+  height: 500px;
+  padding: 50px 260px;
+  display: flex;
+  justify-content: center;
+}
+#reservation img {
+  margin: 10px 0;
+  width: 200px;
+  height: 100px;
+}
+.hotel {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  text-align: left;
+}
+.hotel ul {
+  display: flex;
+  padding-left: 0;
+}
+
+.hotel li {
+  margin: 0 3px;
+}

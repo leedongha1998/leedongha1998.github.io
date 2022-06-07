@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="signup.html" id="signup">회원가입</a>
+      <a href="usertable.html" id="usertable">회원목록</a>
+    </nav>
+    <h1>로그인</h1>
+    <form action="index.html">
+      <label for="id">아이디</label>
+      <input type="text" id="id" />
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" />
+      <p id="p"></p>
+      <button onclick="logincheck()" id="btn">확인</button>
+    </form>
+    <script>
+      const logincheck = () => {
+        for (
+          let i = 0;
+          i < JSON.parse(localStorage.getItem("infos")).length;
+          i++
+        ) {
+          if (
+            JSON.parse(localStorage.getItem("infos"))[i].userid === id.value ||
+            JSON.parse(localStorage.getItem("infos"))[i].userid != id.value
+          ) {
+            if (
+              password.value !=
+              JSON.parse(localStorage.getItem("infos"))[i].password
+            ) {
+              btn.setAttribute("disabled", "true");
+              p.innerHTML = "아이디 혹은 비밀번호가 틀렸습니다.";
+              id.focus();
+              setTimeout(() => {
+                btn.removeAttribute("disabled");
+              }, 1000);
+            } else {
+              p.innerHTML = "";
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

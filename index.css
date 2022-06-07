@@ -1,0 +1,23 @@
+a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+#signup {
+  display: flex;
+  justify-content: end;
+}
+:not(#signup) {
+  margin-bottom: 100px;
+}
+body {
+  margin: 0;
+  height: 100%;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}

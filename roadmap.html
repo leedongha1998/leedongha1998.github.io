@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로드맵</title>
+    <link rel="stylesheet" href="roadmap.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <h1 >Start</h1>
+      <div>
+        <ul>
+          <h3>Language</h3>
+          <ul>
+            <li>kotlin</li>
+            <li>java</li>
+          </ul>
+      </div>
+      <i class="fa-solid fa-arrow-down"></i>
+      <div>
+        <h3>The Fundamentals</h3>
+        <ul>
+          <li>install Android Studio</li>
+          <li>Learn the Basic of kotlin</li>
+          <li>Basic of OOP</li>
+          <li>dataStructures and Algorithms</li>
+          <li>What is and how to use Gradle?</li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-arrow-down"></i>
+      <div>
+        <h3>Version Control System</h3>
+        <ul>
+          <li>what are Version Control Systems?</li>
+          <li>Why you should use one?</li>
+        </ul>
+        <h3>Repo Hosting Services</h3>
+        <ul>
+          <li>GitHub</li>
+          <li>GitLab</li>
+          <li>Bitbucket</li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-arrow-down"></i>
+      <div>
+        <h3>Writing Robust Apps</h3>
+        <ul>
+          <li>
+            Learn Multithreading
+            
+          </li>
+          <li>Security</li>
+          <li>
+            Testing
+            <ul>
+              <li>JUnit</li>
+              <li>Espresso</li>
+            </ul>
+          </li>
+          <li>
+            Dependency Management
+            <ul>
+              <li>Dagger</li>
+              <li>Koin</li>
+            </ul>
+          </li>
+          <li>Concurrency</li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-arrow-down"></i>
+      <a href="index.html"><h1><i class="fa-brands fa-android"></i>Android Developer</h1></a>
+      <div id="clickMe">
+        <span >Click me</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+      
+    </ul>
+    </div>
+    <script>
+      const list = document.querySelectorAll("li");
+      let cnt = 0;
+
+      const showList = () =>{
+        list[cnt].classList.add('active'); // 액티브 속성 추가
+        cnt++;
+        if(cnt >= list.length){
+          clearInterval(addActive);
+        }
+      }
+
+      const addActive = setInterval(showList,500); // 인터벌 추가
+
+
+    </script>
+  </body>
+</html>

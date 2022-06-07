@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./signup.css" />
+    <title>회원가입</title>
+  </head>
+
+  <body>
+    <h1>회원가입</h1>
+    <form action="trip.html">
+      <form action="javascript:saveinfo()" name="userinfo">
+        <div class="id">
+          <h4>아이디</h4>
+          <input type="text" id="userid" required onblur="useridcheck()" />
+          <p></p>
+        </div>
+
+        <div class="icon">
+          <h4>비밀번호</h4>
+          <i class="fa-solid fa-eye view" onclick="viewpassword()"></i>
+          <input
+            type="password"
+            id="password"
+            required
+            onblur="checkpassword(event)"
+          />
+          <p></p>
+        </div>
+
+        <div class="icon">
+          <h4 id="repasswordh3">비밀번호 재확인</h4>
+          <i class="fa-solid fa-eye view"></i>
+          <input
+            type="password"
+            id="repassword"
+            required
+            onblur="checkpassword(event), isEqualPwd()"
+          />
+          <div class="alert"></div>
+        </div>
+
+        <div class="name">
+          <h4>이름</h4>
+          <input type="text" id="username" />
+        </div>
+
+        <div class="birth">
+          <h4>생년월일</h4>
+          <div>
+            <input
+              type="text"
+              name="phone"
+              id="birth"
+              placeholder="YYYYMMDD"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="gender">
+          <h4>성별</h4>
+          <select name="gender" id="gender">
+            <option value selected>성별</option>
+            <option value="M">남자</option>
+            <option value="F">여자</option>
+            <option value="U">선택안함</option>
+          </select>
+        </div>
+
+        <div class="mail">
+          <h4>이메일</h4>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div class="phone">
+          <h4>휴대전화</h4>
+          <div>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+              placeholder="010-1234-5678"
+              required
+            />
+            <button type="button" onclick="certified() /index.html">
+              인증받기
+            </button>
+          </div>
+        </div>
+
+        <div class="injung">
+          <input type="text" placeholder="인증번호" id="number" />
+        </div>
+
+        <button id="submit" onclick="saveinfo()">확인</button>
+        <!-- 인증번호 받기 버튼 누르면 자동으로 4자리 숫자 채워짐 -->
+      </form>
+    </form>
+
+    <script>
+      const useridcheck = () => {
+        const item = localStorage.getItem("infos");
+        const p = document.querySelector(".id p");
+        if (item.match(`${userid.value}`) != null) {
+          userid.focus();
+          p.innerHTML = "이미 사용중인 아이디입니다.";
+        } else {
+          p.innerHTML = "";
+        }
+      };
+      const certified = () => {
+        const phone = document.querySelector(".phone input");
+        if (!phone.value) return;
+        setTimeout(() => {
+          let num = Math.round(Math.random() * 8999 + 1000);
+          number.value = num;
+        }, 2000);
+      };
+
+      const checkpassword = (e) => {
+        const val = e.target.value;
+        const div = document.getElementsByClassName("alert");
+        const p = document.querySelector(".icon p");
+        if (!/^.{8,12}$/.test(val)) {
+          p.innerHTML = "비밀번호는 8~12글자 사이여야 됩니다.";
+          input.focus();
+          return;
+        } else {
+          p.innerHTML = "";
+        }
+        if (!/\d/.test(val)) {
+          p.innerHTML = "비밀번호는 하나이상의 숫자를 포함해야 됩니다.";
+          return;
+        } else {
+          p.innerHTML = "";
+        }
+        if (!/[a-z]/i.test(val)) {
+          p.innerHTML = "비밀번호는 하나이상의 영문자를 포함해야 됩니다.";
+          return;
+        } else {
+          p.innerHTML = "";
+        }
+        if (!/[!&/\\*@]+/.test(val)) {
+          p.innerHTML =
+            "비밀번호는 하나이상의 특수문자(!&/\*@)를 포함해야 됩니다.";
+          return;
+        } else {
+          p.innerHTML = "";
+        }
+
+        console.log("비밀번호 유효합니다.");
+      };
+
+      function isEqualPwd() {
+        if (password.value == repassword.value) {
+          return true;
+        } else {
+          alert("비밀번호가 일치하지 않습니다.");
+          password.select();
+          return false;
+        }
+      }
+
+      class Userinfo {
+        constructor(userid, password, username, birth, gender, email, phone) {
+          this.userid = userid;
+          this.password = password;
+          this.username = username;
+          this.birth = birth;
+          this.gender = gender;
+          this.email = email;
+          this.phone = phone;
+        }
+      }
+
+      const saveinfo = () => {
+        const useridVal = userid.value;
+        const passwordVal = password.value;
+        const usernameVal = username.value;
+        const birthVal = birth.value;
+        const genderVal = gender.value;
+        const emailVal = email.value;
+        const phoneVal = phone.value;
+
+        const info = new Userinfo(
+          useridVal,
+          passwordVal,
+          usernameVal,
+          birthVal,
+          genderVal,
+          emailVal,
+          phoneVal
+        );
+
+        const infos = JSON.parse(localStorage.getItem("infos")) || [];
+        infos.push(info);
+
+        const data = JSON.stringify(infos);
+
+        localStorage.setItem("infos", data);
+
+        document.userinfo.reset();
+      };
+    </script>
+  </body>
+</html>

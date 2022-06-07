@@ -1,0 +1,98 @@
+form {
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 50px;
+}
+p {
+  color: red;
+  width: 305px;
+  font-size: 15px;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  margin: 10px 0;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  border-radius: 12px;
+  border: solid 1px #1f1f1d50;
+}
+
+select {
+  width: 300px;
+  height: 44px;
+  border-radius: 12px;
+  border: solid 1px #1f1f1d50;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon i {
+  position: absolute;
+  right: 0;
+  opacity: 0.4;
+  padding: 14px;
+}
+
+h4 {
+  margin-top: 0;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  width: 304px;
+}
+.phone input {
+  float: left;
+  width: 70%;
+}
+.phone button {
+  float: right;
+  width: 25%;
+  height: 44px;
+}
+button {
+  border-style: none;
+  border-radius: 10px;
+  background-color: #3c76a7;
+  color: white;
+}
+/* input스타일 x버튼 제거 */
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+input:focus {
+  outline: solid 2px rgba(0, 110, 255, 0.5);
+}
+
+#submit {
+  margin: 10px 0 0 0;
+  width: 300px;
+  height: 40px;
+}

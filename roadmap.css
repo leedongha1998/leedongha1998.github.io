@@ -1,0 +1,50 @@
+* {
+  background-color: rgba(0, 0, 0, 1);
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h1 {
+  background-color: blue;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.fa-android {
+  margin-right: 10px;
+  background-color: blue;
+}
+h3 {
+  color: red;
+}
+i {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+#clickMe {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 50px;
+  right: 250px;
+}
+#clickMe span {
+  margin-right: 10px;
+}
+
+/* 액티브 속성 */
+li.active {
+  color: orange;
+  transition: 0.3s ease-in;
+}
