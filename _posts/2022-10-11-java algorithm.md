@@ -2,13 +2,21 @@
 title: "자바 알고리즘"
 categories:
  - algorithm
-   tags: [ALGORITHM] 
-   toc: true
-   author_profile: true #profile sidebar 감추기
+tags: [algorithm] 
+toc: true
+author_profile: true #profile sidebar 감추기
 # sidebar:
 #     nav: "docs" # 목차 사이드바
 search: true #검색 피하기
 ---
+
+
+
+#자바 알고리즘 개념
+
+[ toc]
+
+
 
 ##### Scanner 정의 및 특징
 
