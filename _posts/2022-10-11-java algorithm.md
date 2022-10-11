@@ -14,8 +14,6 @@ search: true #검색 피하기
 
 #자바 알고리즘 개념
 
-[ toc]
-
 
 
 ##### Scanner 정의 및 특징
