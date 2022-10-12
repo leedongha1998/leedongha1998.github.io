@@ -157,7 +157,39 @@ System.out.println(c + d + e);
 
 
 
-​	
+##### 배열 앞 뒤 순서 바꾸기 문제
+
+lt, rt로 양쪽에서 하나씩 점검하면서 좁혀오는 과정
+
+```java
+char[] arr = str.toCharArray();
+		int lt = 0;
+		int rt = str.length() -1;
+		char temp = 'a';
+		while(lt < rt) {
+			if(!Character.isAlphabetic(arr[lt])) {
+				lt++;
+			}else if (!Character.isAlphabetic(arr[rt])) {
+				rt--;
+			}else {
+				temp = arr[lt];
+				arr[lt] = arr[rt];
+				arr[rt] = temp;
+				lt++;
+				rt--;
+			}
+		}
+```
+
+
+
+##### indexOf
+
+{: .notice--info}
+
+먼저 indexOf는 특정 문자나 문자열이 앞에서부터 처음 발견되는 인덱스를 반환. 만약 찾지 못했으면 -1 리턴.
+
+
 
 
 
