@@ -86,7 +86,7 @@ search: true #검색 피하기
 ```java
 public static void main(String[] args) {
     StringBuilder sb = new StringBuilder();
-    //문자열이 커질수록 자동으로 크기를 추가하기 때문		에 초기에 주는 생성자에 크기값을 줄 필요가 크게 없다.
+    //문자열이 커질수록 자동으로 크기를 추가하기 때문에 초기에 주는 생성자에 크기값을 줄 필요가 크게 없다.
 	}
 
 sb.append("i"); // 문자열 끝에 추가
@@ -188,6 +188,23 @@ char[] arr = str.toCharArray();
 {: .notice--info}
 
 먼저 indexOf는 특정 문자나 문자열이 앞에서부터 처음 발견되는 인덱스를 반환. 만약 찾지 못했으면 -1 리턴.
+
+
+
+##### 문자열 내 마음대로 정렬하기 문제(프로그래머스)
+
+{: .notice--info}
+
+참고 사이트 : <https://discover.tistory.com/42>
+
+1. sort와 substring으로 해결하기
+2. 알파벳 int형
+3. compare
+4. 람다식
+
+
+
+
 
 
 
