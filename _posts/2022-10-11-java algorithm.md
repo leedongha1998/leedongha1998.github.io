@@ -109,7 +109,7 @@ search: true #검색 피하기
 
 ​	{: .notice--info}
 
-​	문자열 버퍼에 담아 그 안에서 추가 수정 삭제 작업을 할 수 있	도록 도와주는 클래스
+​	문자열 버퍼에 담아 그 안에서 추가 수정 삭제 작업을 할 수 있도록 도와주는 클래스
 
 
 
@@ -132,7 +132,7 @@ sb.substring(0,4); // 0~3까지 문자열 추출
 
 ###### 	StringBuffer
 
-​	{: .notice-info}
+​	{: .notice--info}
 
 ​	StringBuilder와 사용법이 동일하다.
 
@@ -217,6 +217,28 @@ char[] arr = str.toCharArray();
 
 
 
+###### 가장 가까운 거리 구하기 문제
+
+<details>
+    <summary>문제 보기</summary>
+    설명 : 한 개의 문자열과 문자가 주어지면 문자열의 각 문자가 주어진 문자와 떨어진 최소거리를 구하시오
+
+    예시입력 : teachermode e
+    예시출력 : 1 0 1 2 1 0 1 2 2 1 0
+</details>
+
+왼쪽에서 오른쪽을 for문 돌려 거리 체크,
+
+오른쪽에서 왼쪽으로 for문 돌려 거리 체크하여 둘 중 작은 값으로 솔루션 구한다.
+
+
+
+ 
+
+
+
+
+
 ##### indexOf
 
 {: .notice--info}
@@ -245,6 +267,14 @@ char[] arr = str.toCharArray();
 2. 알파벳 int형
 3. compare
 4. 람다식
+
+
+
+##### 변환 관련
+
+######  int num = Integer.parseInt(temp, 2);
+
+temp를 2진수로 바꾸어준다.
 
 
 
