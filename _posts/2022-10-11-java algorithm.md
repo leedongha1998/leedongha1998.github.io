@@ -221,15 +221,96 @@ char[] arr = str.toCharArray();
 
 <details>
     <summary>문제 보기</summary>
-    설명 : 한 개의 문자열과 문자가 주어지면 문자열의 각 문자가 주어진 문자와 떨어진 최소거리를 구하시오
+    설명 : 한 개의 문자열과 문자가 주어지면 문자열의 각 문자가 주어진 문자와 떨어진 최소거리를 구하시오 <br>
+예시입력 : teachermode e <br>
+예시출력 : 1 0 1 2 1 0 1 2 2 1 0
 
-    예시입력 : teachermode e
-    예시출력 : 1 0 1 2 1 0 1 2 2 1 0
 </details>
 
-왼쪽에서 오른쪽을 for문 돌려 거리 체크,
+<br>
 
-오른쪽에서 왼쪽으로 for문 돌려 거리 체크하여 둘 중 작은 값으로 솔루션 구한다.
+**왼쪽에서 오른쪽을 for문 돌려 거리 체크,**
+
+**오른쪽에서 왼쪽으로 for문 돌려 거리 체크하여 둘 중 작은 값으로 솔루션 구한다.**
+
+
+
+###### ArrayList
+
+{: .notice--info}
+
+ArrayList는 자바의 List 인터페이스를 상속받은 여러 클래스 중 하나입니다.<br> 일반 배열과 동일하게 연속된 메모리 공간을 사용하여 인덱스는 0부터 시작한다.<br>크기가 가변적으로 변한다.
+
+
+
+​	**ArrayList 생성**
+
+```java
+import java.util.ArrayList;
+
+ArrayList<Integer> integers1 = new ArrayList<Integer>(); // 타입 지정
+ArrayList<Integer> integers2 = new ArrayList<>(); // 타입 생략 가능
+ArrayList<Integer> integers3 = new ArrayList<>(10); // 초기 용량(Capacity) 설정
+ArrayList<Integer> integers4 = new ArrayList<>(integers1); // 다른 Collection값으로 초기화
+ArrayList<Integer> integers5 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5)); // Arrays.asList()
+```
+
+
+
+**엘레멘트 추가/변경/삭제**
+
+```java
+ArrayList<String> colors = new ArrayList<>();
+        // add() method
+        colors.add("Black");
+        colors.add("White");
+        colors.add(0, "Green");
+        colors.add("Red");
+
+        // set() method
+        colors.set(0, "Blue");
+
+		 colors.remove("White");
+```
+
+
+
+**ArrayList 전체 값 확인**
+
+```java
+  		// for-each loop
+        for (String color : colors) {
+            System.out.print(color + "  ");
+        }
+        System.out.println();
+
+        // for loop
+        for (int i = 0; i < colors.size(); ++i) {
+            System.out.print(colors.get(i) + "  ");
+        }
+        System.out.println();
+
+        // using iterator
+        Iterator<String> iterator = colors.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + "  ");
+        }
+        System.out.println();
+
+        // using listIterator
+        ListIterator<String> listIterator = colors.listIterator(colors.size());
+        while (listIterator.hasPrevious()) {
+            System.out.print(listIterator.previous() + "  ");
+        }
+        System.out.println();
+```
+
+
+
+**값 존재 유무 확인**
+
+1. 값이 존재하는지만 알고 싶은 경우 contains()
+2. 값이 어느 위치에 있는지 알고 싶은 경우 indexOf(), 값이 존재하지 않을 경우 -1 리턴
 
 
 
@@ -253,7 +334,7 @@ char[] arr = str.toCharArray();
 
 ###### Collections.reversOrder()
 
-​	내림차순 정렬, 기본타입(int,long)과 같은 타입으로 사용할 수 	없고 <span style="background-color:yellow"> 래퍼 클래스 및 개체에서</span> 작동하는 메소드이다. 
+​	내림차순 정렬, 기본타입(int,long)과 같은 타입으로 사용할 수 	없고 <span style="background-color:yellow color:black"> 래퍼 클래스 및 개체에서</span> 작동하는 메소드이다. 
 
 
 
