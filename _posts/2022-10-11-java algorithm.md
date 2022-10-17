@@ -18,11 +18,13 @@ search: true #검색 피하기
 
 
 
-##### 입출력 관련
+##### <span style="color:green">입출력 관련</span>
+
+---
+
+
 
 ###### Scanner 정의 및 특징
-
-​	{: .notice--info}
 
 1. ***기본적인 데이터 타입들을 Scanner의 메소드를 사용하여 입력받을 수 있다.***(예로 들어 100을 입력하고자 할 때, 문자열로 입력받고 싶으면 next()나 nextLine()을, 정수로 받고 싶다면 nextInt()를 사용하여 입력받으면 알아서 해당 타입으로 입력된다.)
 2. ***Scanner를 사용할 시 util 패키지를 경로의 Scanner 클래스를 호출해야 한다.***(자바에서 쓰이는 대부분의 클래스는 lang패키지가 아니라면 import를 통해 호출해주어야 한다. Scanner의 경우는 java.util에 있다.)
@@ -59,7 +61,11 @@ search: true #검색 피하기
 
 
 
-##### 문자 관련
+##### <span style="color:green">문자 관련</span>
+
+---
+
+
 
 ###### 대소문자 변환
 
@@ -103,7 +109,11 @@ search: true #검색 피하기
 
 
 
-##### 단어 뒤집기
+##### <span style="color:green">단어 뒤집기</span>
+
+---
+
+
 
 ###### 	StringBuilder
 
@@ -189,7 +199,11 @@ System.out.println(c + d + e);
 
 
 
-##### 배열 관련
+##### <span style="color:green">배열 관련</span>
+
+---
+
+
 
 ###### 배열 앞 뒤 순서 바꾸기 문제
 
@@ -243,7 +257,7 @@ ArrayList는 자바의 List 인터페이스를 상속받은 여러 클래스 중
 
 
 
-​	**ArrayList 생성**
+- **ArrayList 생성**
 
 ```java
 import java.util.ArrayList;
@@ -257,7 +271,7 @@ ArrayList<Integer> integers5 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5)); //
 
 
 
-**엘레멘트 추가/변경/삭제**
+- **엘레멘트 추가/변경/삭제**
 
 ```java
 ArrayList<String> colors = new ArrayList<>();
@@ -275,7 +289,7 @@ ArrayList<String> colors = new ArrayList<>();
 
 
 
-**ArrayList 전체 값 확인**
+- **ArrayList 전체 값 확인**
 
 ```java
   		// for-each loop
@@ -307,7 +321,7 @@ ArrayList<String> colors = new ArrayList<>();
 
 
 
-**값 존재 유무 확인**
+- **값 존재 유무 확인**
 
 1. 값이 존재하는지만 알고 싶은 경우 contains()
 2. 값이 어느 위치에 있는지 알고 싶은 경우 indexOf(), 값이 존재하지 않을 경우 -1 리턴
@@ -330,7 +344,11 @@ ArrayList<String> colors = new ArrayList<>();
 
 
 
-##### 정렬 관련
+##### <span style="color:green">정렬 관련</span>
+
+---
+
+
 
 ###### Collections.reversOrder()
 
@@ -351,7 +369,11 @@ ArrayList<String> colors = new ArrayList<>();
 
 
 
-##### 변환 관련
+##### <span style="color:green">변환 관련</span>
+
+---
+
+
 
 ######  int num = Integer.parseInt(temp, 2);
 
