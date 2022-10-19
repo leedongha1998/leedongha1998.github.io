@@ -138,6 +138,7 @@ sb.insert(5,"i"); // 특정 위치에 추가
 sb.setCharAt(4,'b'); // char이기 때문에 '' 사용
 sb.replace(4,5,"cc"); // 시작점 끝점 설정후 해당 구간 변경 원하는 문자열 추가
 sb.substring(0,4); // 0~3까지 문자열 추출
+sb.setLength(0); // 문자열 비우기
 ```
 
 
@@ -382,6 +383,42 @@ ArrayList<String> colors = new ArrayList<>();
 ######  int num = Integer.parseInt(temp, 2);
 
 temp를 2진수로 바꾸어준다.
+
+
+
+##### <span style="color:green">비트 연산 관련</span>
+
+---
+
+###### 10진수를 2진수로 변환하기(toBinaryString)
+
+```java
+int b = 4;
+String str = Integer.toBinaryString(b);
+
+// result = 100
+```
+
+
+
+###### 비트연산자
+
+<a href="http://www.tcpschool.com/c/c_operator_bitwise">비트연산자 참고 사이트</a>
+
+- & : 대응되는 비트가 모두 1이면 1을 반환(and)
+- | : 대응되는 비트 중에서 하나라도 1이면 1을 반환(or)
+- ^ : 대응되는 비트가 서로 다르면 1을 반환(xor)
+- ~ : 비트를 1이면 0으로, 0이면 1로 반전시킴(not)
+- << : 지정한 수만큼 비트들을 전부 왼쪽으로 이동시킴
+- \>> : 부호를 유지하면서 지정한 수만큼 비트를 전부 오른쪽으로 이동시킴
+
+
+
+##### <span style="color:green;">Math</span>
+
+---
+
+- Math.pow(대상숫자, 지수) :대상숫자의 제곱 수를 반환하며 입력값과 출력값 모두 double형이다.
 
 
 
