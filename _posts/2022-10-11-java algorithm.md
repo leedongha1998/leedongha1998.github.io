@@ -419,7 +419,8 @@ String str = Integer.toBinaryString(b);
 ---
 
 - Math.pow(대상숫자, 지수) :대상숫자의 제곱 수를 반환하며 입력값과 출력값 모두 double형이다.
-- 
+
+
 
 
 
