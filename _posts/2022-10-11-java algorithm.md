@@ -494,6 +494,51 @@ class Solution {
 
 
 
+##### <span style="color:green">소수찾기</span>
+
+###### 에라토스테네스 체
+
+```java
+//1부터 10까지의 소수 개수 찾기
+int[] ch = new int[10+1];
+int answer = 0;
+for(int i=2; i<=10; i++){
+    if(answer == 0){
+		answer++;
+        for(int j=i; j<=10; j=j+i){
+            ch[j] = 1;
+        }
+    }
+}
+
+
+// 1부터 10까지 소수 찾기
+ 
+	int num = 10;
+	
+	ArrayList<Integer> list = new ArrayList<>();
+	
+	for(int i=1; i<num+1; i++) {
+        // 1부터 10까지 소수인 지 판단하는 메소드에 넣어 확인한 후 true면 리스트에 값 담기
+		if(isPrime(i))
+			list.add(i);
+	}    
+	System.out.println(list);
+  }
+
+// 소수 판단 메소드
+  private static boolean isPrime(int i) {
+	if(i == 1)
+		return false;
+	for(int k=2; k<i; k++) {
+		if(i % k == 0)
+			return false;
+		}	
+	
+		return true;
+	}
+```
+
 
 
 
