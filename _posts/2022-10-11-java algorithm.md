@@ -424,6 +424,76 @@ String str = Integer.toBinaryString(b);
 
 
 
+##### <span style="color:green;">탐색관련</span>
+
+---
+
+###### 프로그래머스(최소직사각형 lv.1)
+
+{: .notice--info}
+
+[[60, 50], [30, 70], [60, 30], [80, 40]] 로 주어진 지갑 사이즈의 배열에서 모든 지갑이 들어갈 수 있는 최소 사이즈를 찾는 문제
+
+
+
+```java
+// 높이는 내부 배열의 큰 값 중에서 가장 큰 값, 너비는 내부 배열의 작은 값 중에 최대값으로 해결
+for(int[] value : sizes){
+            height = Math.max(height, Math.max(value[0],value[1]));
+            width = Math.max(width, Math.min(value[0],value[1]));
+        }
+
+```
+
+
+
+###### 프로그래머스(모의고사 lv.1)
+
+{: .notice--info}
+
+주어진 답과 학생들의 패턴을 비교하여 가장 많이 맞춘 학생을 찾는 문제
+
+
+
+```java
+class Solution {
+    public static int[] solution(int[] answers) {
+        
+        // 학생들의 패턴
+        int[][] patterns = {
+                {1, 2, 3, 4, 5},
+                {2, 1, 2, 3, 2, 4, 2, 5},
+                {3, 3, 1, 1, 2, 2, 4, 4, 5, 5}
+        };
+		
+        // 정답 개수 확인하여 배열에 넣기
+        int[] hit = new int[3];
+        for(int i = 0; i < hit.length; i++) {
+            for(int j = 0; j < answers.length; j++) {
+                if(patterns[i][j % patterns[i].length] == answers[j]) hit[i]++;
+            }
+        }
+
+        // 최대 값 확인
+        int max = Math.max(hit[0], Math.max(hit[1], hit[2]));
+        
+        // 가장 많이 맞춘 학생 조사
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0; i < hit.length; i++)
+            if(max == hit[i]) list.add(i + 1);
+
+        // list -> 배열로 변환
+        int[] answer = new int[list.size()];
+        int cnt = 0;
+        for(int num : list)
+            answer[cnt++] = num;
+        return answer;
+    }
+}
+```
+
+
+
 
 
 
