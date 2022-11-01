@@ -343,7 +343,7 @@ ArrayList<String> colors = new ArrayList<>();
 
 {: .notice--info}
 
-먼저 indexOf는 특정 문자나 문자열이 앞에서부터 처음 발견되는 인덱스를 반환. 만약 찾지 못했으면 -1 리턴.
+먼저 indexOf는 특정 문자나 문자열이 앞에서부터 처음 발견되는 인덱스를 반환. 만약 찾지 못했으면 -1 리턴
 
 
 
