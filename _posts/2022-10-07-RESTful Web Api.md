@@ -16,7 +16,7 @@ search: true #검색 피하기
 
 
 
-##### http 응답
+##### http 응답.
 
 1. **상태 코드(status code)**
 
