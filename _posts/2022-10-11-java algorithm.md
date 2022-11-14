@@ -541,7 +541,109 @@ for(int i=2; i<=10; i++){
 
 
 
+##### for문
 
+###### <a href="https://cote.inflearn.com/contest/10/problem/02-11">임시반장 정하기-인프런</a>
+
+{: .notice--info}
+
+**삼중 중첩** for문을 활용하여 첫번째 for문은 기준학생, 두번째 for 문은 비교학생, 세번째 for문은 5학년까지의 수로 반복문을 돌려 같은 반인지 확인하였고 같은 반을 확인했으면 cnt++, break문으로 빠져나왔다.
+
+```java
+ public int solution(int n, int[][] arr) {
+		int answer = 0;
+		int max = Integer.MIN_VALUE;
+		
+		for(int i=1; i<=n; i++) {
+			int cnt = 0;
+			for(int j=1; j<=n; j++) {
+				for(int k=1; k<=5; k++) {
+					if(arr[i][k] == arr[j][k]) {
+						cnt++;
+						break;
+					}
+				}
+			}
+			if(cnt > max) {
+				max = cnt;
+				answer = i;
+			}
+				
+		}
+
+		return answer;
+```
+
+
+
+###### <a href="https://cote.inflearn.com/contest/10/problem/02-12">임시반장정하기-인프런</a>
+
+{: .notice--info}
+
+4중 중첩 for문을 활용하였다. 첫번째와 두번째 for문을 사용하여 멘토 멘티 조합을 만들어 내고 세번째 네번째 for문을 활용하여 멘토 멘티 조합이 가능한 조합인지 체크하였다.
+
+```java
+ public int solution(int n, int m,int[][] arr) {
+		int answer = 0;
+		
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=n; j++) {
+				int cnt = 0;
+				for(int k=0; k<m; k++) {
+					int pi = 0;
+					int pj = 0;
+					
+					for(int s=0; s<n; s++) {
+						if(arr[k][s] == i) pi=s;
+						if(arr[k][s]==j) pj=s;
+					}
+					if(pi < pj) cnt++;
+				}
+				if(cnt == m)
+					answer++;
+			}
+		}
+		
+		
+		return answer;
+	}
+```
+
+
+
+###### 봉우리(상,하,좌,우 체크)
+
+<a href="https://cote.inflearn.com/contest/10/problem/02-10">봉우리-인프런</a>
+
+{: .notice--info}
+
+dx와 dy를 통하여 상하좌우 체크를 할 수 있도록 해주었다.
+
+``` java
+public int solution(int n, int[][] arr) {
+		int answer = 0;
+		
+		int[] dx = {-1,0,1,0};
+		int[] dy = {0,1,0,-1};
+		
+		for(int i=0; i<n; i++) {
+			for(int j=0; j<n; j++) {
+				boolean flag = true;
+				for(int k=0; k<4; k++) {
+					
+					if(i + dx[k] >=0 && i + dx[k] < n && j + dy[k] >= 0 && j + dy[k] < n&& arr[i + dx[k]][j + dy[k]] >= arr[i][j]) {
+						flag = false;
+						break;
+					}
+				}
+				if(flag)
+					answer++;
+			}
+		}
+		
+		return answer;
+	}
+```
 
 
 
