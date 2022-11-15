@@ -121,7 +121,7 @@ search: true #검색 피하기
 
 ###### 	StringBuilder
 
-​	{: .notice--info}
+{: .notice--info}
 
 ​	문자열 버퍼에 담아 그 안에서 추가 수정 삭제 작업을 할 수 있도록 도와주는 클래스
 
@@ -147,7 +147,7 @@ sb.setLength(0); // 문자열 비우기
 
 ###### 	StringBuffer
 
-​	{: .notice--info}
+{: .notice--info}
 
 ​	StringBuilder와 사용법이 동일하다.
 
@@ -159,7 +159,7 @@ sb.setLength(0); // 문자열 비우기
 
 ###### 	valueOf()
 
-​	{: .notice--info}
+{: .notice--info}
 
 ​	괄호 안의 해당 객체를 String 객체로 변환시키는 역할을 한다.
 
@@ -243,7 +243,6 @@ char[] arr = str.toCharArray();
     설명 : 한 개의 문자열과 문자가 주어지면 문자열의 각 문자가 주어진 문자와 떨어진 최소거리를 구하시오 <br>
 예시입력 : teachermode e <br>
 예시출력 : 1 0 1 2 1 0 1 2 2 1 0
-
 </details>
 
 <br>
@@ -541,7 +540,11 @@ for(int i=2; i<=10; i++){
 
 
 
-##### for문
+##### <span style="color:green;">for문</span>
+
+---
+
+
 
 ###### <a href="https://cote.inflearn.com/contest/10/problem/02-11">임시반장 정하기-인프런</a>
 
