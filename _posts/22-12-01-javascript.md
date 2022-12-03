@@ -167,7 +167,7 @@ let students = ['철수','영희',3,false,{name:'mike',age:30},function(){consol
 
 
 
-##### for of 반복문
+##### for of 반복문(배열 순회할 때 사용하는 것이 좋다.)
 
 ```javascript
 let days = ['월','화','수'];
