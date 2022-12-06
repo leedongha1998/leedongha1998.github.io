@@ -224,10 +224,6 @@ symbol.keyFor(a); // "id"
 
 
 
-
-
-
-
 ##### 객체 메소드
 
 1. Object.assign() : 객체 복제
